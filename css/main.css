@@ -1,6 +1,6 @@
 h1{
     font-size: 40px;
-    font-family: "algerian";
+    font-family: "Lucida Console", "Courier New", monospace;
 } 
 
 h2{
@@ -8,20 +8,24 @@ h2{
     font-family: "Lucida Console", "Courier New", monospace;
 }
 
-h1,h2.section-level{
-    font-family: "Lucida Console", "Courier New", monospace;
-}           
-
-h2.subpage{
-    color: #999;
+h2.level-goal{
+    font-size: 30px;
+    font-family: "tahoma" !important;
+    color: blue;
 }
+
+h1.section-level,h2.section-level{
+    color: #999;
+    font-family: "tahoma" !important;
+    font-size: 30px;
+}           
 
 img{
     vertical-align: middle;
     margin: 0px 30px;
 }
 
-p,a.body-site{
+p.body-site, a.body-site{
     font-family: "algerian";
     font-size: 24px;
 }

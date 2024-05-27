@@ -5,31 +5,7 @@
     <head>
         <title>Bandit - Livello 0</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
-		<!-- <link rel="stylesheet" href="css/mystyle.css"> -->
-        <style>
-            img{
-                vertical-align: middle;
-                margin: 0px 20px;
-            }
-            h2{
-                color: #999;
-                font-family: "tahoma" !important;
-            }
-            p,a{
-                font-family: "algerian";
-                font-size: 24px;
-            }
-            a.navigate{
-                color: revert;
-            }
-            .blue{
-                color: blue;
-            }
-            .gray{
-                color: gray;
-            }
-
-        </style>
+		<link rel="stylesheet" href="../css/main.css">
     </head>
     <body>
         <div class="w3-container w3-dark-grey">
@@ -38,8 +14,8 @@
         <div class="w3-container">
             <p><img src="../img/bandit.png" width=400 height=200 alt="bandit image"></p>
             <br/>
-            <h2 align="center" class="blue">Obiettivo di livello</h2>
-            <p align="center">
+            <h2 align="center" class="level-goal">Obiettivo di livello</h2>
+            <p align="center" class="goal-level">
                 L'obiettivo di questo livello è che tu acceda al gioco usando SSH. 
                 L'host a cui devi connetterti è <strong>bandit.labs.overthewire.org</strong>,
                 sulla porta 2220. Il nome utente è <strong>bandit0</strong> e la password è 
@@ -47,17 +23,17 @@
                 <a class="blue" href="l1.html">Livello 1</a> per scoprire come battere il Livello 1.
             </p>
             <br/>
-            <h2>Comandi di cui potresti aver bisogno per risolvere questo livello</h2>
+            <h2 class="section-level">Comandi di cui potresti aver bisogno per risolvere questo livello</h2>
             <p><a class="gray" href="https://man7.org/linux/man-pages/man1/ssh.1.html">ssh</a></p>
             <br>
-            <h2>Materiale di lettura utile</h2>
+            <h2 class="section-level">Materiale di lettura utile</h2>
             <hr>
             <ul>
-                <li><a class="blue" href="https://it.wikipedia.org/wiki/Secure_Shell">Secure Shell (SSH) su Wikipedia</a></li>
-                <li><a class="blue" href="https://www.wikihow.com/Use-SSH">Come usare SSH su wikiHow</a></li>
+                <li><a class="blue" class="body-site" href="https://it.wikipedia.org/wiki/Secure_Shell">Secure Shell (SSH) su Wikipedia</a></li>
+                <li><a class="blue" class="body-site" href="https://www.wikihow.com/Use-SSH">Come usare SSH su wikiHow</a></li>
             </ul>
             <br/>
-            <h2>Soluzione livello 0</h2>
+            <h2 class="section-level">Soluzione livello 0</h2>
             <hr>
             <img src="../img/ssh_bandit.png" width="400" height="200" alt="ssh connect image">
             <div class="w3-panel w3-leftbar w3-border-blue">
