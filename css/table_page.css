@@ -1,0 +1,17 @@
+/*
+ * css/table_page.css
+ *
+ **/
+
+th{
+    background-color: LimeGreen;
+    color: white;
+}
+
+tr:hover{
+    color: coral;
+}
+            
+table{
+    width: 35%;
+}
