@@ -21,8 +21,8 @@ h1.section-level,h2.section-level{
 }           
 
 img{
-    vertical-align: middle;
-    margin: 0px 30px;
+    width: 100%;
+    height: auto;
 }
 
 p.body-site, a.body-site{
