@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+        <title>Bandit - Livello 4</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+		<link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="w3-container w3-dark-grey">
+            <h1>Bandit Livello 4</h1>
+        </div>
+        <div class="w3-container">
+            <p><img src="../img/bandit.png" width=400 height=200 alt="bandit image"></p>
+            <br/>
+            <h2 align="center" class="level-goal">Obiettivo di livello</h2>
+            <p align="center" class="body-site">
+                La password per il livello successivo è archiviata nell'unico 
+                file leggibile dall'uomo nella directory inhere. Suggerimento: 
+                se il tuo terminale è incasinato, prova il comando "reset".
+            </p>
+            <br/>
+            
+            <h2 class="section-level">Comandi di cui potresti aver bisogno per risolvere questo livello</h2>
+            <p class="gray">
+                <a href="https://man7.org/linux/man-pages/man1/ls.1.html">ls</a>,
+                <a href="https://man7.org/linux/man-pages/man1/cd.1.html">cd</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/cat.1.html">cat</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/file.1.html">file</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/du.1.html">du</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/find.1.html">find</a>
+            </p>
+            <br/>
+
+            <h2 class="section-level">Soluzione livello 4</h2>
+            <hr>
+            <p>
+                ci <a class="navigate" href="l0.html">connettiamo</a>
+                con ssh alla porta 2220 e user bandit4 con passowrd
+                del livello 3
+            </p>
+
+            <p>
+                oppure scarichiamo il nosto script da
+                <a class="navigate" href="https://github.com/bandit-ita/bandit-ita.github.io/blob/master/utility_scripts/connectToBanditLevel/ssh_bandit.py">
+                    Github
+                </a>
+                e avviamolo con <strong>python3 ssh_bandit.py bandit4</strong>
+            </p>
+
+
+            <img src="../img/cmd4l.png" width="400" height="200" alt="image">
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <p>file ./*</p>
+            </div>
+            <p>
+                attraverso il comando <strong>file</strong> sulla directory <strong>inhere</strong> 
+                specifichiamo al terminale di voler esaminare tutti i file presenti nella directory
+                attraverso il carattere speciale <strong>'*'</strong>
+            </p>
+            <br/>
+            <p>e visualizziamo il file con il nostro comando</p>
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <p>cat ./-file07</p>
+            </div>
+            <p>passwd: <strong> lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR</strong></p>
+        </div>
+        <p align="right"><a class="navigate" href="../index.html">torna alla home</a></p>
+    </body>
+<html>
