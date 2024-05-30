@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+        <title>Bandit - Livello 5</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+		<link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="w3-container w3-dark-grey">
+            <h1>Bandit Livello 5</h1>
+        </div>
+        <div class="w3-container">
+            <p><img src="../img/bandit.png" width=400 height=200 alt="bandit image"></p>
+            <br/>
+            <h2 align="center" class="level-goal">Obiettivo di livello</h2>
+            <p align="center" class="body-site">
+			    La password per il livello successivo è archiviata in un file da qualche 
+                parte nella directory inhere e ha tutte le seguenti proprietà:
+			    <pre>
+	                leggibile dagli umani
+	                1033 byte di dimensione
+	                non eseguibile
+			    </pre>
+            </p>
+            <br/>
+            
+            <h2 class="section-level">Comandi di cui potresti aver bisogno per risolvere questo livello</h2>
+            <p class="gray">
+                <a href="https://man7.org/linux/man-pages/man1/ls.1.html">ls</a>,
+                <a href="https://man7.org/linux/man-pages/man1/cd.1.html">cd</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/cat.1.html">cat</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/file.1.html">file</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/du.1.html">du</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/find.1.html">find</a>
+            </p>
+            <br>
+            
+
+            <h2 class="section-level">Soluzione livello 5</h2>
+            <hr>
+            <p>
+                ci <a class="navigate" href="l0.html">connettiamo</a>
+                con ssh alla porta 2220 e user bandit5 con passowrd
+                del livello 4
+            </p>
+
+            <p>
+                oppure scarichiamo il nosto script da
+                <a class="navigate" href="https://github.com/bandit-ita/bandit-ita.github.io/blob/master/utility_scripts/connectToBanditLevel/ssh_bandit.py">
+                    Github
+                </a>
+                e avviamolo con <strong>python3 ssh_bandit.py bandit5</strong>
+            </p>
+
+
+            <img src="../img/cmd_findl5.png" width="400" height="200" alt="image">
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <p>find -type f -size 1033c ! -executable -exec file {} + | grep ASCII </p>
+            </div>
+            <p>
+                attraverso il comando <strong>find</strong> diamo 
+                
+                <ul>
+                    <li><strong>-type f</strong> per dire che cerchiamo un file</li>
+
+                    <li><strong>-size 1033c</strong> per comunicare di voler trovare
+                    solo i file con dimensione 1033 Byte(la c per specificare Byte)</li>
+                    <li><strong>! -executable</strong> per indicare al comando di volere
+                    solo i file non eseguibili(! sta per not)</li>
+                    <li><strong>-exec file {} +</strong> Per ogni file trovato, esegue il 
+                    comando file (che identifica il tipo di contenuto del file). con +
+                    diciamo ad exec che è la fine del comando(tipo ;) NB: il carattere '+'
+                    deve essere staccato da {} oppure lo riconosce come un unica stringa e non
+                    come carattere di terminazione del programma
+                    <li><strong>| grep ASCII</strong></li> filtra l'output con il comando grep
+                    indicando di far visualizzare solo le stringhe con "ASCII" presente(cioe
+                    file leggibili dall'umano, human redeable). Usando il parametro -i a grep 
+                    possiamo far ignorare a grep la presenza di caratteri minuscoli o maiuscoli;
+                    quindi diremo a grep di farci vedere i risultati della parola "ascii", "Ascii",
+                    "ASCII","aScii" ecc.
+                </ul>
+                il carattere '|' unisce gli output dei due comandi mentre con ';' esegue prima uno
+                e po l'altro
+            </p>
+            <br/>
+
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <p>cat ./maybehere07/.file2</p>
+            </div>
+            <p>passwd: <strong>P4L4vucdmLnm8I7Vl7jG1ApGSfjYKqJU</strong></p>
+        </div>
+        <p align="right"><a class="navigate" href="../index.html">torna alla home</a></p>
+    </body>
+<html>
