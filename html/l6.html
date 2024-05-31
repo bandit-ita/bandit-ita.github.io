@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html>
+    <head>
+        <title>Bandit - Livello 6</title>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+		<link rel="stylesheet" href="../css/main.css">
+    </head>
+    <body>
+        <div class="w3-container w3-dark-grey">
+            <h1>Bandit Livello 6</h1>
+        </div>
+        <div class="w3-container">
+            <p><img src="../img/bandit.png" width=400 height=200 alt="bandit image"></p>
+            <br/>
+            <h2 align="center" class="level-goal">Obiettivo di livello</h2>
+            <p align="center" class="body-site">
+                La password per il livello successivo è memorizzata da qualche parte 
+                sul server e ha tutte le seguenti proprietà:
+			<pre>
+	di proprietà dell'utente bandit7
+	di proprietà del gruppo bandit6
+	33 byte di dimensione
+			</pre>
+            </p>
+            <br/>
+            
+            <h2 class="section-level">Comandi di cui potresti aver bisogno per risolvere questo livello</h2>
+            <p class="gray">
+                <a href="https://man7.org/linux/man-pages/man1/ls.1.html">ls</a>,
+                <a href="https://man7.org/linux/man-pages/man1/cd.1.html">cd</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/cat.1.html">cat</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/file.1.html">file</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/du.1.html">du</a> ,
+                <a href="https://man7.org/linux/man-pages/man1/find.1.html">find</a>
+            </p>
+            <br>
+            
+            <h2 class="section-level">Soluzione livello 6</h2>
+            <hr>
+            <p>
+                ci <a class="navigate" href="l0.html">connettiamo</a>
+                con ssh alla porta 2220 e user bandit6 con passowrd
+                del livello 5
+            </p>
+
+            <p>
+                oppure scarichiamo il nosto script da
+                <a class="navigate" href="https://github.com/bandit-ita/bandit-ita.github.io/blob/master/utility_scripts/connectToBanditLevel/ssh_bandit.py">
+                    Github
+                </a>
+                e avviamolo con <strong>python3 ssh_bandit.py bandit6</strong>
+            </p>
+
+
+            <img src="../img/find_ug.png" width="400" height="200" alt="image">
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <p>find / -type f -user bandit7 -group bandit6 -size 33c 2&gt;/dev/null</p>
+            </div>
+            <p>
+                attraverso il comando <strong>find</strong> diamo 
+                <ul>
+                    <li><strong>/</strong> per dire che cominciamo a cercare dalla
+                        <a class="navigate" target="_blank" href="https://www.sistrix.it/chiedi-a-sistrix/basi-seo/url/directory-root">
+                            root directory
+                        </a>
+                    </li>
+                    <li><strong>-type f</strong> per dire che cerchiamo un file</li>
+                    <li><strong>-user bandit7</strong> per dire che il file che cerchiamo e di 
+                    proprieta dell'utente bandit7</li>
+                    <li><strong>-group bandit6</strong>per dire che il file che cerchiamo e di
+                     proprietà del gruppo 6</li>
+                    <li><strong>-size 33c</strong>per comunicare di voler trovare
+                    solo i file con dimensione 33 Byte (la c per specificare Byte)</li>
+                    <li><strong>2>/dev/null</strong> per dire che tutto il flusso di errore(stderr, rappresentato
+                     dal file descriptor 2)<br>viene indirizzato tutto /dev/null, cosi facendo non ci fa 
+                     visualizzare gli errori di permessi errati
+              </ul>
+
+            </p>
+            <br/>
+
+            <img src="../img/" width="400" height="200" alt="image">
+            <div class="w3-panel w3-leftbar w3-border-blue">
+                <p>cat /var/lib/dpkg/info/bandit7.password</p>
+            </div>
+            <p>passwd: <strong>z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S</strong></p>
+        </div>
+        <p align="right"><a class="navigate" href="../index.html">torna alla home</a></p>
+    </body>
+<html>
